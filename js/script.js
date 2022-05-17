@@ -1,12 +1,6 @@
-function randomNumber (min, max) {
-    return Math.floor(Math.random() * (max - min) + min)
+const mixWord = (word) => {
+    const mix = word.split("").sort(() => Math.random() -0.5);
+    mix.join(",") !== word ? console.log(mix) : console.log(`${mix} : mot complet`);
 }
 
-function mixWord (word) {
-    for (let i = 0; i < word.split("").length; i++) {
-        const rdmLetter = word[randomNumber(0, word.split("").length)];
-        console.log(rdmLetter);
-    }
-}
-
-mixWord("oui");
+mixWord("cornichon");
